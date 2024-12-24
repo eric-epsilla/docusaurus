@@ -292,9 +292,6 @@ export default function Home(): ReactNode {
         </div>
         <TweetsSection />
         <QuotesSection />
-        <div>
-        document.head.removeChild(script);
-        </div>
       </main>
     </Layout>
   );
