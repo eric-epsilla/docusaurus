@@ -275,16 +275,20 @@ export default function Home(): ReactNode {
         <TweetsSection />
         <QuotesSection />
 
-        <div style={{ padding: '20px' }}>
-          <h1>Embedded Chatbot</h1>
-          <p>Below is the embedded chatbot:</p>
-          <iframe
-            src="https://cloud.epsilla.com/chatbot/ce07c6fc-e57e-4e46-b7bd-b7819f22bcff/704144f4-f11a-4839-934a-23dd1bfd52d9?mode=embed"
-            width="900px"
-            height="600px"
-            style={{ border: 'none' }}
-            title="Chatbot"
-          ></iframe>
+        <div>
+        <script>
+        (function(d, w, c) {
+            w.AppUrl = 'chatbot/ce07c6fc-e57e-4e46-b7bd-b7819f22bcff/704144f4-f11a-4839-934a-23dd1bfd52d9?mode=embed';
+            w.themeColor = '#8564D7';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://script.epsilla.com/epsilla.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Epsilla');
+        </script>
         </div>
   
       </main>
