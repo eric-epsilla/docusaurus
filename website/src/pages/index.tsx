@@ -275,7 +275,6 @@ export default function Home(): ReactNode {
         <TweetsSection />
         <QuotesSection />
 
-        <script>
         (function(d, w, c) {
             w.AppUrl = 'chatbot/ce07c6fc-e57e-4e46-b7bd-b7819f22bcff/704144f4-f11a-4839-934a-23dd1bfd52d9?mode=embed';
             w.themeColor = '#8564D7';
@@ -287,7 +286,6 @@ export default function Home(): ReactNode {
             s.src = 'https://script.epsilla.com/epsilla.js';
             if (d.head) d.head.appendChild(s);
         })(document, window, 'Epsilla');
-        </script>
 
   
       </main>
