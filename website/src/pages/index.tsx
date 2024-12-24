@@ -258,11 +258,29 @@ function TopBanner() {
   );
 }
 
+
+
 export default function Home(): ReactNode {
   const {
     siteConfig: {customFields, tagline},
   } = useDocusaurusContext();
   const {description} = customFields as {description: string};
+  const script = document.createElement('script');
+  script.innerHTML = `
+    (function(d, w, c) {
+      w.AppUrl = 'chatbot/ce07c6fc-e57e-4e46-b7bd-b7819f22bcff/704144f4-f11a-4839-934a-23dd1bfd52d9?mode=embed';
+      w.themeColor = '#8564D7';
+      var s = d.createElement('script');
+      w[c] = w[c] || function() {
+          (w[c].q = w[c].q || []).push(arguments);
+      };
+      s.async = true;
+      s.src = 'https://script.epsilla.com/epsilla.js';
+      if (d.head) d.head.appendChild(s);
+    })(document, window, 'Epsilla');
+  ;
+  document.head.appendChild(script);
+  
   return (
     <Layout title={tagline} description={description}>
       <main>
@@ -274,23 +292,9 @@ export default function Home(): ReactNode {
         </div>
         <TweetsSection />
         <QuotesSection />
-
         <div>
-        <script>
-        (function(d, w, c) {
-            w.AppUrl = 'chatbot/ce07c6fc-e57e-4e46-b7bd-b7819f22bcff/704144f4-f11a-4839-934a-23dd1bfd52d9?mode=embed';
-            w.themeColor = '#8564D7';
-            var s = d.createElement('script');
-            w[c] = w[c] || function() {
-                (w[c].q = w[c].q || []).push(arguments);
-            };
-            s.async = true;
-            s.src = 'https://script.epsilla.com/epsilla.js';
-            if (d.head) d.head.appendChild(s);
-        })(document, window, 'Epsilla');
-        </script>
+        document.head.removeChild(script);
         </div>
-  
       </main>
     </Layout>
   );
