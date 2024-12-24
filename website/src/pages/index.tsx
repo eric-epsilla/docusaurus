@@ -274,6 +274,22 @@ export default function Home(): ReactNode {
         </div>
         <TweetsSection />
         <QuotesSection />
+
+        <script>
+        (function(d, w, c) {
+            w.AppUrl = 'chatbot/ce07c6fc-e57e-4e46-b7bd-b7819f22bcff/704144f4-f11a-4839-934a-23dd1bfd52d9?mode=embed';
+            w.themeColor = '#8564D7';
+            var s = d.createElement('script');
+            w[c] = w[c] || function() {
+                (w[c].q = w[c].q || []).push(arguments);
+            };
+            s.async = true;
+            s.src = 'https://script.epsilla.com/epsilla.js';
+            if (d.head) d.head.appendChild(s);
+        })(document, window, 'Epsilla');
+        </script>
+
+  
       </main>
     </Layout>
   );
